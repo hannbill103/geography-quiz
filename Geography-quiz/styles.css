@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background-image: url('images/earth.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white; /* gör texten vit så den syns mot bakgrunden */
+}
+
+.intro-bg {
+  /* Om du bara vill använda bakgrunden på en viss sektion istället för hela sidan */
+  background-image: url('images/earth.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.6); /* halvgenomskinlig bakgrund */
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.falling-text span {
+  display: inline-block;
+  transform: translateY(-100px);
+  opacity: 0;
+  animation: dropIn 0.6s ease-out forwards;
+}
+
+@keyframes dropIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fördröj varje bokstav */
+.falling-text span:nth-child(1) { animation-delay: 0s; }
+.falling-text span:nth-child(2) { animation-delay: 0.05s; }
+.falling-text span:nth-child(3) { animation-delay: 0.1s; }
+.falling-text span:nth-child(4) { animation-delay: 0.15s; }
+.falling-text span:nth-child(5) { animation-delay: 0.2s; }
+.falling-text span:nth-child(6) { animation-delay: 0.25s; }
+.falling-text span:nth-child(7) { animation-delay: 0.3s; }
+.falling-text span:nth-child(8) { animation-delay: 0.35s; }
+.falling-text span:nth-child(9) { animation-delay: 0.4s; }
+.falling-text span:nth-child(10) { animation-delay: 0.45s; }
+.falling-text span:nth-child(11) { animation-delay: 0.5s; }
+.falling-text span:nth-child(12) { animation-delay: 0.55s; }
+.falling-text span:nth-child(13) { animation-delay: 0.6s; }
+.falling-text span:nth-child(14) { animation-delay: 0.65s; }
+
+.custom-btn {
+  font-size: 1.25rem;
+  padding: 12px 32px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00aaff, #0077cc);
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #0077cc, #005fa3);
+}
+#quiz-container {
+  min-height: 100vh; /* gör att den fyller hela höjden */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
